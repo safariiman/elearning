@@ -5,7 +5,8 @@ from .routes.api_profile import api_profile_router
 from .routes.chat import router as chat_router
 from .routes.reminder import router as reminder_router
 from .database import Base, engine
-
+from .routes import personalized_quiz
+app.include_router(personalized_quiz.router)
 app = FastAPI()
 
 app.add_middleware(
